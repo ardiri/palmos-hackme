@@ -1,0 +1,25 @@
+/*
+ * @(#)hackme.rcp
+ *
+ * Copyright 2000, Aaron Ardiri (mailto:aaron@ardiri.com)
+ * All rights reserved.
+ *
+ * This  file was  generated as part of the "|HaCkMe|" system extension
+ * that has been specifically designed for the Palm Computing Platform.
+ *
+ *   http://www.palm.com/
+ *
+ * The contents of this file are confidential and proprietary in nature
+ * ("Confidential Information"). Redistribution or modification without
+ * prior consent of the original author(s) is prohibited.
+ */
+
+VERSION "1.0"
+
+ICONFAMILY
+  "images/icon1bpp.bmp" "images/icon2bpp.bmp" "" "images/icon8bpp.bmp"
+TRANSPARENCY 0 255 0
+
+SMALLICONFAMILY
+  "images/smic1bpp.bmp" "images/smic2bpp.bmp" "" "images/smic8bpp.bmp"
+TRANSPARENCY 0 255 0

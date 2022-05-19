@@ -1,0 +1,98 @@
+/*
+ * @(#)hackme.rcp
+ *
+ * Copyright 2000, Aaron Ardiri (mailto:aaron@ardiri.com)
+ * All rights reserved.
+ *
+ * This  file was  generated as part of the "|HaCkMe|" system extension
+ * that has been specifically designed for the Palm Computing Platform.
+ *
+ *   http://www.palm.com/
+ *
+ * The contents of this file are confidential and proprietary in nature
+ * ("Confidential Information"). Redistribution or modification without 
+ * prior consent of the original author(s) is prohibited.
+ */
+
+#include "resource.h"
+
+FORM ID infoForm AT (2 2 156 156) MODAL
+BEGIN
+  TITLE "About |HaCkMe|"
+
+  FORMBITMAP AT (8 16) BITMAP bitmapIcon
+  LABEL "http://www.ardiri.com/" AUTOID AT (52 PrevTop)
+  LABEL "aaron@ardiri.com" AUTOID AT (54 PrevBottom) FONT 1
+
+  FORMBITMAP AT (88 PrevBottom+4) BITMAP bitmapPalm
+  LABEL "\251 2000-2003" AUTOID AT (8 PrevTop+2)
+  LABEL "ardiri.com" AUTOID AT (8 PrevBottom)
+  LABEL "All rights reserved" AUTOID AT (8 PrevBottom)
+
+  LABEL "|HaCkMe|" AUTOID AT (8 PrevBottom+3) FONT 1
+  LABEL "version 1.0" AUTOID AT (8 PrevBottom-1) FONT 1
+
+  LABEL "This software is provided for the" AUTOID AT (8 PrevBottom+3)
+  LABEL "use with purchased software only." AUTOID AT (8 PrevBottom) 
+
+  BUTTON "Ok" ID infoFormOkButton AT (CENTER 138 40 AUTO)
+END
+
+FORM ID mainForm AT (0 0 160 160) NOSAVEBEHIND
+MENUID mainMenu
+BEGIN
+  TITLE "|HaCkMe|"
+
+  BUTTON "" ID globalFormAboutButton AT (147 1 12 12) NOFRAME
+  FORMBITMAP AT (PrevLeft PrevTop) BITMAP bitmapAbout
+
+  LABEL "Change the HotSync\231 user name" AUTOID AT (CENTER 20)
+  LABEL "for each application below:" AUTOID AT (CENTER PrevTop+12)
+
+  LABEL "Application:" AUTOID AT (48 PrevTop+22) FONT 1
+  POPUPTRIGGER "" ID mainFormAppTrigger AT (48 PrevTop+12 96 AUTO) LEFTANCHOR
+  LIST "" ID mainFormAppList AT (PrevLeft+16 PrevTop 88 16) VISIBLEITEMS 7 NONUSABLE
+  POPUPLIST ID mainFormAppTrigger mainFormAppList  
+
+  LABEL "HotSync\231 Name:" AUTOID AT (48 PrevTop+16) FONT 1
+  FIELD ID mainFormHotsyncField AT (48 PrevTop+12 96 AUTO) EDITABLE SINGLELINE UNDERLINED MAXCHARS 30
+  GRAFFITISTATEINDICATOR AT (148 PrevTop+1)
+
+  BUTTON "SAVE" ID mainFormSaveButton AT (8 PrevTop-6 AUTO AUTO)
+
+  LABEL "Enter in the desired HotSync\231" AUTOID AT (CENTER PrevTop+24) 
+  LABEL "user name and hit the Save button." AUTOID AT (CENTER PrevTop+12) 
+
+  LABEL "\251 2000-2003 ardiri.com" AUTOID AT (CENTER 148) FONT 1
+END
+
+MENU ID mainMenu
+BEGIN
+  PULLDOWN "Help"
+  BEGIN
+    MENUITEM "About"        menuItemAbout
+  END
+END
+
+VERSION "1.0"
+
+ICONFAMILY
+  "images/icon1bpp.bmp" "images/icon2bpp.bmp" "" "images/icon8bpp.bmp"
+TRANSPARENCY 0 255 0
+
+SMALLICONFAMILY
+  "images/smic1bpp.bmp" "images/smic2bpp.bmp" "" "images/smic8bpp.bmp"
+TRANSPARENCY 0 255 0
+
+BITMAPFAMILY bitmapIcon
+  "images/icon1bpp.bmp" "images/icon2bpp.bmp" "" "images/icon8bpp.bmp" COMPRESS
+TRANSPARENCY 0 255 0
+
+BITMAPFAMILY bitmapIconDefault
+  "images/idef1bpp.bmp" "images/idef2bpp.bmp" "" "images/idef8bpp.bmp" COMPRESS
+TRANSPARENCY 0 255 0
+
+BITMAPFAMILY bitmapPalm
+  "images/palm1bpp.bmp" "images/palm2bpp.bmp" "" "images/palm8bpp.bmp" COMPRESS
+
+BITMAP bitmapAbout "images/info1bpp.bmp" COMPRESS
